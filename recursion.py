@@ -21,7 +21,12 @@ def print_item(my_list, i=0):
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
-
+# class Node(object):
+#     def __init__(self, data):
+#             self.data=data
+#             self.children = []
+#     def add_child(self, obj):
+#             self.children.append(obj)
 def print_all_tree_data(tree):
     """Prints all of the nodes in a tree.
 
@@ -44,8 +49,8 @@ def print_all_tree_data(tree):
         3
 
     """
-    print node.data
-    for child in node.children:
+    print tree.data
+    for child in tree.children:
         print_all_tree_data(child)
 
 # 3. Write a function that uses recursion to find the length of a list.
@@ -93,7 +98,7 @@ def num_nodes(tree):
         6
     """
     count=1
-    for child in node.children:
+    for child in tree.children:
         count += num_nodes(child)
     return count
 

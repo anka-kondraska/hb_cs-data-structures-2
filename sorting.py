@@ -21,7 +21,17 @@ def merge_lists(list1, list2):
     [1, 3, 4, 7, 9, 11]
     """
 
-    pass
+    merged = []
+    while len(list1) > 0 or len(list2) > 0:
+        if list1==[]:
+            merged.append(list2.pop(0))
+        elif list2==[]:
+            merged.append(list1.pop(0))
+        elif list1[0] < list2[0]:
+            merged.append(list1.pop(0))
+        else:
+            merged.append(list2.pop(0))
+    return merged
 
 
 ##########ADVANCED##########
